@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Splitter</title>
+</head>
+<body>
+    <h1>String Splitter</h1>
+    <form method="post">
+        <label for="input_string">Enter a string with commas:</label><br>
+        <input type="text" id="input_string" name="input_string"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if processed_string %}
+        <h2>Processed String:</h2>
+        <p>{{ processed_string }}</p>
+    {% endif %}
+</body>
+</html>
+

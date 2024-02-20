@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  # observatory-service:
+  #   build: ./observatory  # path is relative to docker-compose.yml localtion
+  #   volumes:
+  #     - ./observatory:/usr/src/app # mount point
+  #   ports:
+  #     - 5001:80  # host:container
+
+  backend:
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    ports:
+      - "5000:5000"  
+    
+    volumes:
+      - .:/code
+
+    env_file: .env
+
+     
