@@ -109,9 +109,22 @@ def index():
         oov_token = '00_V' 
         padding_type = 'post'
         trunc_type = 'post'  
+        test_sequences = tokenizer.texts_to_sequences(X_test)
+        X_test = pad_sequences(test_sequences, maxlen=max_len, padding=padding_type, truncating=trunc_type)
+        
+        max_len = 2000     
+        oov_token = '00_V' 
+        padding_type = 'post'
+        trunc_type = 'post'  
 
         tokenizer = Tokenizer()
-        tokenizer.fit_on_texts(X_train)
+        # tokenizer.fit_on_texts(X_train)
+        # vocab_size = len(tokenizer.word_index) + 1
+        # print("Vocab Size: ",vocab_size)
+
+        test_sequences = tokenizer.texts_to_sequences(X_test)
+        X_test = pad_sequences(test_sequences, maxlen=max_len, padding=padding_type, truncating=trunc_type)
+
         vocab_size = len(tokenizer.word_index) + 1
         print("Vocab Size: ",vocab_size)
         embed_dim = 20 
