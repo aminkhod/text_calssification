@@ -1,4 +1,4 @@
-FROM python:3.14.0rc1-slim-bullseye
+FROM python:3.15-rc-slim-trixie
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /app
 WORKDIR /app
