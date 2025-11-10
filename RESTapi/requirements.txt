@@ -1,5 +1,5 @@
 Flask==2.2.5
-nltk==3.6.6
+nltk==3.8.1
 tensorflow==2.4
 pandas
 
